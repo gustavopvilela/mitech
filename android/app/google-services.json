@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "10976224987",
+    "project_id": "mitech-6058a",
+    "storage_bucket": "mitech-6058a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10976224987:android:c7c28d203046d403418efe",
+        "android_client_info": {
+          "package_name": "com.example.mitech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10976224987-fup6nqshr5qn5u80dbno03ducli7usdg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mitech",
+            "certificate_hash": "e6d4aa4074403667e94ca7e26426e285ac0b9cc8"
+          }
+        },
+        {
+          "client_id": "10976224987-b9vf8djcg0jnut0sup3pm3usl086n2sp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqF5U9oVEK-xmMGDAo4QDpVR0kN5GajGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10976224987-b9vf8djcg0jnut0sup3pm3usl086n2sp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
