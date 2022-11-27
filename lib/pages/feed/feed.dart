@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:mitech/controllers/bookmarked_posts_controller.dart';
 import 'package:mitech/models/bookmarked_posts_model.dart';
@@ -57,6 +56,10 @@ class _FeedState extends State<Feed> {
     setState(() {
       hasItAlreadyLoaded = true;
     });
+  }
+
+  shareLink(link) {
+    Share.share(link);
   }
 
   // GETTING THE FEED
@@ -140,6 +143,7 @@ class _FeedState extends State<Feed> {
     return text.substring(firstQuote + 1, lastQuote);
   }
 
+  
   /* updateTitle(title) {
     setState(() {
       _title = title;
@@ -308,15 +312,13 @@ class _FeedState extends State<Feed> {
               ),
 
               SlidableAction(
-                backgroundColor: const Color.fromARGB(255, 177, 113, 219),
-                foregroundColor: Colors.white,
+                backgroundColor: Colors.yellow,
+                foregroundColor: Colors.black,
                 icon: Icons.share,
                 label: 'Compartilhar',
-                onPressed: (context) async {
-                  await Share.share(
-                    _removeQuotationMarks(listagem[index].key.toString())
-                  );
-                },
+                onPressed: (context) {
+                  shareLink(listagem[index].key.toString());
+                }
               ),
             ],
           ),

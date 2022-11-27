@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:mitech/controllers/bookmarked_posts_controller.dart';
 import 'package:mitech/models/bookmarked_posts_model.dart';
@@ -107,38 +107,14 @@ class _BookmarksState extends State<Bookmarks> {
                   ),
 
                   SlidableAction(
-                    backgroundColor: const Color.fromARGB(255, 177, 113, 219),
-                    foregroundColor: Colors.white,
-                    icon: Icons.copy_outlined,
-                    label: 'Copiar link',
-                    onPressed: (context) async {
-                      await Clipboard.setData(
-                        ClipboardData(
-                          text: _removeQuotationMarks(_bookmarks[index].link!),
-                        ),
-                      );
-                      ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            backgroundColor: const Color.fromARGB(255, 177, 113, 219),
-                            dismissDirection: DismissDirection.startToEnd,
-                            behavior: SnackBarBehavior.floating,
-                            content: Row(
-                              children: const [
-                                Icon(Icons.copy, color: Colors.white,),
-                                SizedBox(width: 25,),
-                                Text(
-                                  'Copiado para a área de transferência!',
-                                  style: TextStyle(
-                                    fontFamily: 'San Francisco',
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        );
-                    },
-                  ),
+                  backgroundColor: Colors.yellow,
+                  foregroundColor: Colors.black,
+                  icon: Icons.share,
+                  label: 'Compartilhar',
+                  onPressed: (context) {
+                    shareLink(_bookmarks[index].link);
+                  }
+              ),
                 ],
               ),
               child: _bookmarksListView[index],
@@ -179,6 +155,10 @@ class _BookmarksState extends State<Bookmarks> {
     int lastQuote = text.lastIndexOf('\'');
     
     return text.substring(firstQuote + 1, lastQuote);
+  }
+  
+  shareLink (link) {
+    Share.share(link);
   }
 
   Text title (String? title) {

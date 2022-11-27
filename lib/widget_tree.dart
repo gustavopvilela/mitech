@@ -20,7 +20,7 @@ class _WidgetTreeState extends State<WidgetTree> {
           return const BarraNavegacao();
         }
         else {
-          return const LoginPage();
+          return const BarraNavegacao();
         }
       },
     );

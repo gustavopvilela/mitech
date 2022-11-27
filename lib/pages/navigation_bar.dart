@@ -3,7 +3,7 @@ import 'package:mitech/pages/basics/basics.dart';
 import 'package:mitech/pages/bookmarks/bookmarks.dart';
 import 'package:mitech/pages/feed/feed.dart';
 import 'package:mitech/pages/search/search_page.dart';
-import 'package:mitech/pages/user_page.dart';
+import 'package:mitech/pages/info/info_page.dart';
 
 class BarraNavegacao extends StatefulWidget {
   const BarraNavegacao({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
     const Basics(),
     const Feed(),
     const SearchPage(),
-    const UserPage(),
+    const InfoPage(),
   ];
   
   @override
@@ -59,9 +59,9 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
               label: 'Procurar'
             ),
             NavigationDestination(
-              icon: Icon(Icons.settings_outlined),
-              selectedIcon: Icon(Icons.settings),
-              label: 'Config.',
+              icon: Icon(Icons.info_outlined),
+              selectedIcon: Icon(Icons.info),
+              label: 'Info.',
             ),
           ],
         ),

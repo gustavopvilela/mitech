@@ -163,7 +163,15 @@ class _SearchPageState extends State<SearchPage> {
                 );
               }
               else {
-                return Container();
+                return const Center(
+                  child: Text(
+                    'Nenhum resultado encontrado.',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: 'San Francisco',
+                    ),
+                  ),
+                );
               }
             }
           );
