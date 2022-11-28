@@ -7,7 +7,7 @@ class InfoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Informações')
+        title: const Text('Informações')
       ),
       body: ListView(
         children: [
@@ -23,13 +23,15 @@ class InfoPage extends StatelessWidget {
 
           ListTile(
             title: const Text('Informações do aplicativo'),
-            subtitle: Text('Coisas em técnicas'),
+            subtitle: const Text('Coisas em técnicas'),
             leading: const Icon(Icons.info),
             trailing: const Icon(Icons.keyboard_arrow_right),
             onTap: () {
               Navigator.of(context).pushNamed('/aboutTheApp');
             },
           ),
+
+          Image.asset('assets/images/info_image.png'),
         ],
       ),
     );

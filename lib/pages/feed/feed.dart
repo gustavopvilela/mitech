@@ -59,7 +59,7 @@ class _FeedState extends State<Feed> {
   }
 
   shareLink(link) {
-    Share.share(link);
+    Share.share(_removeQuotationMarks(link));
   }
 
   // GETTING THE FEED
@@ -143,13 +143,6 @@ class _FeedState extends State<Feed> {
     return text.substring(firstQuote + 1, lastQuote);
   }
 
-  
-  /* updateTitle(title) {
-    setState(() {
-      _title = title;
-    });
-  } */
-
   Text title (title) {
     return Text(
       title,
@@ -183,14 +176,14 @@ class _FeedState extends State<Feed> {
       child: imageUrl != null ? CachedNetworkImage(
         placeholder: (context, url) => Image.asset(placeholderImg),
         imageUrl: imageUrl,
-        height: 75,
-        width: 75,
+        height: 100,
+        width: 100,
         alignment: Alignment.center,
         fit: BoxFit.cover,
       ) :
       SizedBox(
-        height: 75,
-        width: 75,
+        height: 100,
+        width: 100,
         child: Image.asset(placeholderImg),
       ),
     );

@@ -112,7 +112,7 @@ class _BookmarksState extends State<Bookmarks> {
                   icon: Icons.share,
                   label: 'Compartilhar',
                   onPressed: (context) {
-                    shareLink(_bookmarks[index].link);
+                    shareLink(Share.share(_removeQuotationMarks(_bookmarks[index].link)));
                   }
               ),
                 ],
@@ -150,7 +150,7 @@ class _BookmarksState extends State<Bookmarks> {
     });
   }
 
-  _removeQuotationMarks (String text) {
+  _removeQuotationMarks (text) {
     int firstQuote = text.indexOf('\'');
     int lastQuote = text.lastIndexOf('\'');
     
