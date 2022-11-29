@@ -31,6 +31,8 @@ class InfoPage extends StatelessWidget {
             },
           ),
 
+          SizedBox(height: 75,),
+
           Image.asset('assets/images/info_image.png'),
         ],
       ),

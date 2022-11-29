@@ -53,14 +53,14 @@ class _BasicsState extends State<Basics> {
             leading: standardPostsList[index]['imageUrl'] != null ? CachedNetworkImage(
               placeholder: (context, url) => Image.asset(placeholderImg),
               imageUrl: standardPostsList[index]['imageUrl'],
-              height: 50,
-              width: 50,
+              height: 100,
+              width: 100,
               alignment: Alignment.center,
               fit: BoxFit.cover,
             ) :
             SizedBox(
-              height: 50,
-              width: 50,
+              height: 100,
+              width: 100,
               child: Image.asset(placeholderImg),
             ),
             trailing: const Icon(Icons.keyboard_arrow_right),

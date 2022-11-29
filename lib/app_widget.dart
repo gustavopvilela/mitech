@@ -25,8 +25,8 @@ class AppWidget extends StatelessWidget {
         '/widgetTree': (context) => const WidgetTree(),
         '/loginEmail': (context) => const LoginEmailPage(),
         '/barraNavegacao': (context) => const BarraNavegacao(),
-        '/howToUse': (context) => const HowToUse(),
-        '/aboutTheApp': (context) => const AboutTheApp(),
+        '/howToUse': (context) => HowToUse(),
+        '/aboutTheApp': (context) => AboutTheApp(),
       },
     );
   }
