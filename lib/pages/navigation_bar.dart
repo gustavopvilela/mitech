@@ -46,7 +46,7 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
             NavigationDestination(
               icon: Icon(Icons.category_outlined),
               selectedIcon: Icon(Icons.category),
-              label: 'Básico',
+              label: 'Not.-padrão',
             ),
             NavigationDestination(
               icon: Icon(Icons.newspaper_outlined),

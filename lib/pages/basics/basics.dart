@@ -36,7 +36,8 @@ class _BasicsState extends State<Basics> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
+      appBar: AppBar(title: Text('Notícias-padrão'),),
+	  body: ListView.builder(
         itemCount: standardPostsList.length,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
@@ -44,6 +45,9 @@ class _BasicsState extends State<Basics> {
               standardPostsList[index]['title'],
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
+			  style: TextStyle(
+				fontSize: 18.0,
+			  ),
             ),
             subtitle: Text(
               standardPostsList[index]['subtitle'],

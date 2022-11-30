@@ -39,6 +39,11 @@ class _FeedState extends State<Feed> {
       host: 'rss.tecmundo.com.br',
       path: 'feed'
     ),
+	Uri(
+		scheme: 'https',
+		host: 'inovacaotecnologica.com.br',
+		path: 'boletim/rss.xml'
+	),
   ];
 
   List<RssFeed> feeds = [];
@@ -189,23 +194,6 @@ class _FeedState extends State<Feed> {
     );
   }
 
-  /* IconButton rightIcon () {
-    Icon tapIcon = const Icon(Icons.bookmark_add_outlined);
-    return IconButton(
-      enableFeedback: true,
-      onPressed: () {
-        setState(() {
-          tapIcon = const Icon(Icons.bookmark_added);
-        });
-      },
-      icon: tapIcon,
-      color: Colors.grey,
-      );
-
-    /* color: Colors.grey,
-       size: 30.0, */
-  } */
-
   Widget list () {
     List<ListTile> listagem = [];
     
@@ -216,8 +204,8 @@ class _FeedState extends State<Feed> {
           ListTile(
             key: ValueKey('${item.link}'),
             title: title(item.title),
-            subtitle: subtitle(item.dc?.creator ?? 'No author'),
-            leading: thumbnail(item.enclosure!.url),
+            subtitle: subtitle(item.dc?.creator ?? 'Autoria desconhecida'),
+            leading: thumbnail(item.enclosure?.url ?? f.image?.url),
             trailing: const Icon(Icons.keyboard_arrow_right),
             contentPadding: const EdgeInsets.all(5.0),
             onTap: () => openFeed(item.link ?? ''),
