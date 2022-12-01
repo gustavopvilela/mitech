@@ -1,16 +1,2 @@
-# mitech
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# M.I. Tech
+Este aplicativo é um projeto de trabalho de conclusão de curso do curso técnico em Informática do Instituto Federal de Educação, Ciência e Tecnologia de Minas Gerais, Campus Formiga. Dessa forma, a proposta deste trabalho é criar um aplicativo que dê dicas e oriente idosos — alfabetizados e já com alguma noção sobre tecnologia — sobre formas eficientes e práticas para que a tecnologia que está na palma de suas mãos seja utilizada da melhor forma possível, além de trazer dicas e informação digital àqueles que o usam. O app proposto, apelidado de M.I. Tech — “Melhor Idade Tecnológica” —, possui como símbolo sendo um corvo, uma vez que essas pequenas aves são símbolo de sapiência e são conhecidas por seu aprendizado rápido baseado na lógica.
